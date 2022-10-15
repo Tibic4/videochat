@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_15_164633) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_15_172619) do
+  create_table "room_message_to_approves", force: :cascade do |t|
+    t.integer "room_id"
+    t.string "user"
+    t.text "message"
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
+    t.index ["room_id"], name: "index_room_message_to_approves_on_room_id"
+  end
+
   create_table "room_messages", force: :cascade do |t|
     t.integer "room_id"
     t.string "user"
@@ -28,5 +37,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_15_164633) do
     t.index ["name"], name: "index_rooms_on_name", unique: true
   end
 
+  add_foreign_key "room_message_to_approves", "rooms"
   add_foreign_key "room_messages", "rooms"
 end
