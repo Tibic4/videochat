@@ -1,3 +1,4 @@
 class Room < ApplicationRecord
-  belongs_to :room, inverse_of: :room_messages
+  has_many :room_message_to_approve, dependent: :destroy
+  has_many :room_messages, dependent: :destroy
 end
