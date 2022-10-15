@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_15_194038) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_15_200132) do
   create_table "room_messages", force: :cascade do |t|
     t.integer "room_id"
     t.string "user"
@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_15_194038) do
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.boolean "approved", default: false, null: false
+    t.boolean "pending_to_approve", default: true, null: false
     t.index ["room_id"], name: "index_room_messages_on_room_id"
   end
 
