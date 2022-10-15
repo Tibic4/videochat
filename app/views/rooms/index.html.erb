@@ -1,17 +1,23 @@
 <h2>Create a Room!</h2>
+
 <div class="input-group flex-nowrap">
   <div class="input-group-prepend">
     <span class="input-group-text" id="addon-wrapping">@</span>
   </div>
   <input type="text" id="inputUsername" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
 </div>
+
 <div class="input-group input-group-lg">
   <div class="input-group-prepend">
     <span class="input-group-text">Room Name</span>
   </div>
   <input type="text" id="inputRoomName" class="form-control" aria-label="Room Name" aria-describedby="inputGroup-sizing-lg">
 </div>
+
 <button id="createRoomButton" class="btn btn-secondary">Create</button>
+
+
+
 <script type="text/javascript">
 
 	$('#createRoomButton').on('click', function () {
@@ -30,6 +36,7 @@
   				type: 'POST',
   				data: {
             name: roomName,
+            videoUrl: '5qap5aO4i9A'
           }
   			})
   		}
