@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :room_messages
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+	get '/',
+		to: 'rooms#index',
+		as: :rooms_index
+	post '/create',
+		to: 'rooms#create',
+		as: :rooms_create
+  get '/room/:name',
+    to: 'rooms#show',
+    as: :rooms_show
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
