@@ -25,6 +25,8 @@ gem "bootstrap", "~> 5.1.1"
 
 gem "coffee-rails"
 
+gem "uglifier"
+
 gem "turbolinks"
 
 gem "autoprefixer-rails"
