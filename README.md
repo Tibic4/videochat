@@ -1,5 +1,3 @@
-# README
-
 # VideoChat
 
 It's a simple room creator where you can chat and watch videos among your friend who join you.
